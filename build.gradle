@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'ru.bia'
+version = '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.12.1'
+    testImplementation("io.github.bonigarcia:webdrivermanager:5.5.3")
+    testImplementation("org.assertj:assertj-core:3.24.2")
+}
+
+test {
+    useJUnitPlatform()
+}
